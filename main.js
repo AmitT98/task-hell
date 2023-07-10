@@ -1,6 +1,7 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
+//import javascriptLogo from './javascript.svg'
+//import viteLogo from '/vite.svg'
+import { clearTask } from './clearTask'
 import { setupCounter } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
@@ -11,11 +12,13 @@ document.querySelector('#app').innerHTML = `
     </form>
     <div class="card">
       <button id="Submit" type="button" form="form1"></button>
+      <button id="ClearTasks" type="button"> Clear Tasks</button>
     </div>
   </div>
-    <div id="tasks">
+    <div id="tasks" style="position: relative;">
     
     </div>
 `
 
 setupCounter(document.querySelector('#Submit'))
+document.querySelector('#ClearTasks').addEventListener('click', () => clearTask())

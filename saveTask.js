@@ -3,6 +3,6 @@ export function saveTask() {
     const currentTask = document.getElementById("ip1").value
     ptag.innerHTML= currentTask
     document.getElementById("tasks").appendChild(ptag)
-    return currentTask
+    document.cookie +=  "#" + currentTask
   }
   
