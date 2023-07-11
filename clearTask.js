@@ -1,4 +1,8 @@
 export function clearTask() {
-    console.log("I was here")
-    document.cookie = '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+    for(let i = 0; i<=(document.cookie.split(';').length)+2;i++){
+        const task = document.cookie.split(";")[0].split("=")[0]
+        console.log("I ran")
+        document.cookie =  task +'= ; expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+    }
+    document.getElementById('tasks').innerHTML = ""
 }

@@ -9,10 +9,11 @@ document.querySelector('#app').innerHTML = `
     <h1>Welcome to task-hell</h1>
     <form method="get" id="form1">
     <input type="text" id="ip1">
+    <input type="text" id="ip2">
     </form>
     <div class="card">
       <button id="Submit" type="button" form="form1"></button>
-      <button id="ClearTasks" type="button"> Clear Tasks</button>
+      <button id="ClearTasks" type="radio"> Clear Tasks</button>
     </div>
   </div>
     <div id="tasks" style="position: relative;">
@@ -20,5 +21,5 @@ document.querySelector('#app').innerHTML = `
     </div>
 `
 
-setupCounter(document.querySelector('#Submit'))
+setupCounter(document.querySelector('#Submit'),document.querySelector('#ClearTasks'))
 document.querySelector('#ClearTasks').addEventListener('click', () => clearTask())
