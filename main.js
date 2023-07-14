@@ -24,7 +24,7 @@ document.getElementById("ip2")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
-        document.getElementById("id_of_button").click();
+        document.getElementById("Submit").click();
     }
 });
 
