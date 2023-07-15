@@ -8,7 +8,7 @@ export function taskHealth(){
             const greenPer = 255*timeLeft/(deadline-startTime);
             const redPer = 255 - greenPer;
             document.getElementById('tasks').childNodes[1+i].style.color = "rgb(" + redPer.toString() + " "+ greenPer.toString() + " 0)"
-            console.log(greenPer)
+            //console.log(greenPer)
         }
     }
 }
