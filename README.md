@@ -25,8 +25,8 @@ npm run dev
 - [x] Create a basic task tracking webpage to add tasks with two fields, id and short description.
 - [x] Tasks should not get deleted when session is closed.
 - [x] Create a method to clear all the tasks in one go.
-- [ ] Add functionality to set deadline for each task, post which they become dead unless cleared.
-- [ ] Indicate the health of each task by red and green spectrum, $red = 1 - green = timeLeftBeforeDeadline/totalTimeAlloted$
+- [x] Add functionality to set deadline for each task, post which they become dead unless cleared.
+- [x] Indicate the health of each task by red and green spectrum, $red = 1 - green = timeLeftBeforeDeadline/totalTimeAlloted$
 - [ ] Add the ability to add dead task to current set of task.
 - [ ] Show a small dashboard that tells user's productivity by calculating, $100*(1 - deadTasks/totalTasks)$
 - [ ] Add the ability to sign off each task with a note.

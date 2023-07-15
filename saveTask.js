@@ -4,7 +4,7 @@ export function saveTask() {
     const deadlineSeconds = document.getElementById("ip3").value
     const startTime = new Date().getTime()
     const deadline = startTime + deadlineSeconds*1000
-    const hoverDeadline = new Date(new Date().getTime() + deadline ).toString()
+    const hoverDeadline = new Date(deadline).toString()
     ptag.innerHTML= currentTaskName + ":" +  document.getElementById("ip2").value
     ptag.setAttribute("title",hoverDeadline)
     ptag.setAttribute("data-deadline",deadline)

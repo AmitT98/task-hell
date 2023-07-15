@@ -6,7 +6,7 @@ export function loadTask() {
         const taskValue = document.cookie.split(";")[i].split("=")[1].split("::")[0]
         const deadline = Number(document.cookie.split(";")[i].split("=")[1].split("::")[1])
         const startTime = Number(document.cookie.split(";")[i].split("=")[1].split("::")[2])
-        const hoverDeadline = new Date(deadline/1000).toString()
+        const hoverDeadline = new Date(deadline).toString()
         const currentTaskName = taskName
         ptag.innerHTML= currentTaskName + ":" +  taskValue
         ptag.setAttribute("title",hoverDeadline)
