@@ -12,6 +12,6 @@ export function setupCounter(element,el2,loadedTasks) {
     
   }
   element.addEventListener('click', () => setCounter(counter + 1))
-  el2.addEventListener('click', () => setCounter(0))
+  //el2.addEventListener('click', () => setCounter(0))
   setCounter(0)
 }
