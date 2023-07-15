@@ -1,7 +1,7 @@
 export function saveTask() {
     const ptag = document.createElement("p")
     const currentTaskName = document.getElementById("ip1").value
-    const deadlineSeconds = document.getElementById("ip3").value
+    const deadlineSeconds = isNaN(document.getElementById("ip3").value)?1:Number(document.getElementById("ip3").value);
     const startTime = new Date().getTime()
     const deadline = startTime + deadlineSeconds*1000
     const hoverDeadline = new Date(deadline).toString()

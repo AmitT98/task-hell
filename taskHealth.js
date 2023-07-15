@@ -1,5 +1,5 @@
 export function taskHealth(){
-    if (document.cookie != ""){
+    if ((document.cookie != "") || (document.getElementById('tasks').childNodes[1] != undefined)){
         for(let i = 0; i<(document.cookie.split(';').length);i++){
             const deadline  = Number(document.getElementById('tasks').childNodes[1+i].getAttribute("data-deadline"))/1000
             const startTime  = Number(document.getElementById('tasks').childNodes[1+i].getAttribute("data-startTime"))/1000

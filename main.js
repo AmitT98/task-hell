@@ -12,7 +12,7 @@ document.querySelector('#app').innerHTML = `
     <form method="get" id="form1">
     <input type="text" id="ip1" placeholder="task identifier" size="10">
     <input type="text" id="ip2" placeholder="short description of task" size="80">
-    <input type="text" id="ip3" placeholder="lifetime" size="10">
+    <input type="text" id="ip3" placeholder="lifetime(seconds)" size="14">
     </form>
     <div class="card">
       <button id="Submit" type="button" form="form1"></button>
