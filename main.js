@@ -4,6 +4,8 @@ import './style.css'
 import { clearTask } from './clearTask'
 import { setupCounter } from './counter.js'
 import { loadTask } from './loadTask'
+import { saveTask } from './saveTask'
+import { taskHealth } from './taskHealth'
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>Welcome to task-hell</h1>
@@ -32,3 +34,5 @@ document.getElementById("ip2")
 
 setupCounter(document.querySelector('#Submit'),document.querySelector('#ClearTasks'),loadTask())
 document.querySelector('#ClearTasks').addEventListener('click', () => clearTask())
+
+let timerId = setInterval(() => taskHealth(), 2000);
