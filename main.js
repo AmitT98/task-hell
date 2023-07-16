@@ -6,7 +6,7 @@ import { setupCounter } from './counter.js'
 import { loadTask } from './loadTask'
 import { saveTask } from './saveTask'
 import { taskHealth } from './taskHealth'
-import { toObject } from './toObject'
+//import { toObject } from './toObject'
 import { c2s } from './c2s'
 import { sendData } from './sendData'
 document.querySelector('#app').innerHTML = `
