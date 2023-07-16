@@ -6,6 +6,9 @@ import { setupCounter } from './counter.js'
 import { loadTask } from './loadTask'
 import { saveTask } from './saveTask'
 import { taskHealth } from './taskHealth'
+import { toObject } from './toObject'
+import { c2s } from './c2s'
+import { sendData } from './sendData'
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>Welcome to task-hell</h1>
@@ -35,5 +38,10 @@ document.getElementById("ip3")
 
 setupCounter(document.querySelector('#Submit'),document.querySelector('#ClearTasks'),loadTask())
 document.querySelector('#ClearTasks').addEventListener('click', () => clearTask())
+document.getElementById("grave").addEventListener('click',sendData,false)
+document.getElementById("tasks").addEventListener('click',c2s,false)
 
+
+
+//toObject()
 let timerId = setInterval(() => taskHealth(), 2000);

@@ -1,13 +1,15 @@
 export function taskHealth(){
     if ((document.cookie != "") || (document.getElementById('tasks').childNodes[1] != undefined)){
         for(let i = 0; i<(document.cookie.split(';').length);i++){
-            const deadline  = Number(document.getElementById('tasks').childNodes[1+i].getAttribute("data-deadline"))/1000
-            const startTime  = Number(document.getElementById('tasks').childNodes[1+i].getAttribute("data-startTime"))/1000
+            const duration  = Number(document.getElementById('tasks').childNodes[1+i].getAttribute("data-duration"))
+            const startTime  = Number(document.getElementById('tasks').childNodes[1+i].getAttribute("data-startTime"))
             const currTime = new Date().getTime()/1000;
-            const timeLeft = currTime > deadline? 0: deadline-currTime;
-            const greenPer = 255*timeLeft/(deadline-startTime);
+            const timeLeft = currTime - startTime > duration? 0: duration - currTime + startTime;
+            const greenPer = 255*timeLeft/(duration);
             const redPer = 255 - greenPer;
+            if(startTime != 0){
             document.getElementById('tasks').childNodes[1+i].style.color = "rgb(" + redPer.toString() + " "+ greenPer.toString() + " 0)"
+            }
             //console.log(greenPer)
         }
     }
