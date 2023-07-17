@@ -1,7 +1,9 @@
+import { returnDuration } from "./returnDuration";
+
 export function saveTask() {
     const ptag = document.createElement("p")
     const currentTaskName = document.getElementById("ip1").value
-    const duration = isNaN(document.getElementById("ip3").value)?1:Number(document.getElementById("ip3").value);
+    const duration = returnDuration();
     const startTime = 0;
     //const deadline = new Date().getTime() + duration*1000
     //const hoverDeadline = new Date(deadline).toString()

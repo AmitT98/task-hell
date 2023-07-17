@@ -11,11 +11,11 @@ import { c2s } from './c2s'
 import { sendData } from './sendData'
 document.querySelector('#app').innerHTML = `
   <div>
-    <h1>Welcome to task-hell</h1>
+    <h1>Welcome to task-ledger</h1>
     <form method="get" id="form1">
     <input type="text" id="ip1" placeholder="task identifier" size="10">
     <input type="text" id="ip2" placeholder="short description of task" size="80">
-    <input type="text" id="ip3" placeholder="lifetime(seconds)" size="14">
+    <input type="text" id="ip3" placeholder="duration" size="14">
     </form>
     <div class="card">
       <button id="Submit" type="button" form="form1"></button>
@@ -35,8 +35,7 @@ document.getElementById("ip3")
     }
 });
 
-
-setupCounter(document.querySelector('#Submit'),document.querySelector('#ClearTasks'),loadTask())
+setupCounter(document.querySelector('#Submit'),document.querySelector('#ClearTasks'),loadTask(0))
 document.querySelector('#ClearTasks').addEventListener('click', () => clearTask())
 document.getElementById("grave").addEventListener('click',sendData,false)
 document.getElementById("tasks").addEventListener('click',c2s,false)
@@ -44,4 +43,4 @@ document.getElementById("tasks").addEventListener('click',c2s,false)
 
 
 //toObject()
-let timerId = setInterval(() => taskHealth(), 2000);
+let timerId = setInterval(() => taskHealth(), 1000);
