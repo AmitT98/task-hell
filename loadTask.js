@@ -1,3 +1,4 @@
+import { setupCounter } from './counter'
 import {sendData} from './sendData'
 
 export function loadTask(updateGrave) {
@@ -19,6 +20,7 @@ export function loadTask(updateGrave) {
             document.getElementById("grave").appendChild(ptag1)
             document.getElementById("grave").addEventListener('click',sendData,false)
             console.log("I was here")
+            setupCounter(document.querySelector('#Submit'),0,0)
         }
         if(!updateGrave){
         const ptag = document.createElement("p")

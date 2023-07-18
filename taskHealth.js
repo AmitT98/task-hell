@@ -1,3 +1,4 @@
+import { setupCounter } from "./counter";
 import { loadTask } from "./loadTask";
 
 export function taskHealth(){

@@ -13,5 +13,8 @@ export function saveTask() {
     ptag.setAttribute("data-startTime",startTime)
     document.getElementById("tasks").appendChild(ptag)
     document.cookie =    currentTaskName + "= " + document.getElementById("ip2").value +  "::" + duration + "::" + startTime +  ";" + "expires=Tue, 19 Jan 2038 04:14:07 GMT"
+    document.getElementById("ip1").value = ""
+    document.getElementById("ip2").value = ""
+    
   }
   
