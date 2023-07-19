@@ -9,7 +9,7 @@ export function loadTask(updateGrave) {
         const taskValue = document.cookie.split(";")[i].split("=")[1].split("::")[0]
         const duration = Number(document.cookie.split(";")[i].split("=")[1].split("::")[1])
         const startTime = Number(document.cookie.split(";")[i].split("=")[1].split("::")[2])
-        const hoverDeadline = new Date((duration + startTime)*1000).toString()
+        //const hoverDeadline = new Date((duration + startTime)*1000).toString()
         const currentTaskName = taskName
 
         if((duration == -1)&&(!updateGrave)){
@@ -33,7 +33,7 @@ export function loadTask(updateGrave) {
         if(!updateGrave){
         const ptag = document.createElement("p")
         ptag.innerHTML= currentTaskName + ":" +  taskValue
-        ptag.setAttribute("title",hoverDeadline)
+        //ptag.setAttribute("title",hoverDeadline)
         ptag.setAttribute("data-duration",duration)
         ptag.setAttribute("data-startTime",startTime)
         document.getElementById("tasks").appendChild(ptag)
