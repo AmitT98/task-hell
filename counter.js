@@ -1,7 +1,7 @@
 import { saveTask } from "./saveTask"
 
 export function setupCounter(element,el2,loadedTasks) {
-  let counter = document.getElementById("tasks").length;
+  let counter = document.getElementById("tasks").childNodes.length;
   const setCounter = (count) => {
     counter = count
     element.innerHTML = `Press to add task#  ${counter+1}`

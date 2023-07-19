@@ -5,10 +5,20 @@
     <link rel="icon" type="image/svg+xml" href="/th1.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>task-ledger</title>
+    <div id="how2use" class="top">
+      <h3> How to use? </h3>
+      <p> Enter your task id, description and duration.(eg 2h for 2 hours, 10m for minutes, 30s for 30 seconds) </p>
+      <p> Press enter or submit button </p>
+      <p> Click each task individually to start task timer </p>
+      <p> Double click task to complete them </p>
+      <p> The task for which duration is over, appear in expired column and can be reentered by clicking on them</p>
+    </div>
   </head>
   <body>
     <div id="grave"><h2 style="color:crimson; text-shadow: .5px 1px 2px silver;">Expired🪦</h2></div>
     <div id="app"></div>
+    <div id="completed"> <h2 title="click to clear">Completed✅ </h2></div>
     <script type="module" src="/main.js"></script>
+    
     </body>
 </html>

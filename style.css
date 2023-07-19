@@ -91,6 +91,14 @@ button:focus-visible {
   border: aliceblue;
 }
 
+.top{
+  position: fixed;
+  top: 0px;
+  left: 300px;
+  align-content: center;
+  line-height: 1em;
+
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -109,4 +117,12 @@ button:focus-visible {
   top: 0px;
   text-align: left;
   color:red;
+}
+#completed{
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  text-align: left;
+  color: magenta;
+  text-shadow: .5px 1px 2px cyan;
 }

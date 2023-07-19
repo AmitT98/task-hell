@@ -10,6 +10,8 @@ import { taskHealth } from './taskHealth'
 import { c2s } from './c2s'
 import { sendData } from './sendData'
 import { dbc2s } from './dbc2s'
+import { clearCompleted } from './clearCompleted'
+
 document.querySelector('#app').innerHTML = `
   <div>
     <h1>Welcome to task-ledger</h1>
@@ -33,6 +35,7 @@ document.getElementById("ip3")
     if (event.keyCode === 13) {
         document.getElementById("Submit").click();
         document.getElementById("ip1").select();
+        document.getElementById("how2use").innerHTML = ""
     }
 });
 
@@ -41,8 +44,7 @@ document.querySelector('#ClearTasks').addEventListener('click', () => clearTask(
 document.getElementById("grave").addEventListener('click',sendData,false)
 document.getElementById("tasks").addEventListener('click',c2s,false)
 document.getElementById("tasks").addEventListener('dblclick',dbc2s,false)
-//document.querySelector('#Submit').addEventListener('click',saveTask(),false)
 
 let timerId = setInterval(() => taskHealth(), 1000);
-
+document.getElementById("completed").addEventListener('click',clearCompleted,false)
 //toObject()
