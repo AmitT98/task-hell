@@ -29,6 +29,9 @@ npm run dev
 - [x] Create a method to clear all the tasks in one go.
 - [x] Add functionality to set duration for each task, post which they become expired unless cleared.
 - [x] Indicate the health of each task by red and green spectrum, $red = 1 - green = timeLeft/duration$
-- [x] Add the ability to add dead task to current set of task.
+- [x] Add the ability to add expired task to current set of task.
+- [x] Add a section for completed tasks.
+- [x] Allow user to clear only the completed tasks.
+- [x] Add a functionality to display expiry time for the tasks that have been started by user. 
 - [ ] Show a small dashboard that tells user's productivity by calculating, $100*(1 - expiredTasks/totalTasks)$
 - [ ] Add the ability to sign off each task with a note.
