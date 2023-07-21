@@ -7,10 +7,10 @@ import { loadTask } from './loadTask'
 import { saveTask } from './saveTask'
 import { taskHealth } from './taskHealth'
 //import { toObject } from './toObject'
-import { c2s } from './c2s'
-import { sendData } from './sendData'
-import { dbc2s } from './dbc2s'
+import { click2start } from './click2start'
 import { clearCompleted } from './clearCompleted'
+import { dblClick2complete } from './dblClick2complete'
+import { sendData2grave } from './sendData2grave'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -41,9 +41,9 @@ document.getElementById("ip3")
 
 setupCounter(document.querySelector('#Submit'),document.querySelector('#ClearTasks'),loadTask(0))
 document.querySelector('#ClearTasks').addEventListener('click', () => clearTask())
-document.getElementById("grave").addEventListener('click',sendData,false)
-document.getElementById("tasks").addEventListener('click',c2s,false)
-document.getElementById("tasks").addEventListener('dblclick',dbc2s,false)
+document.getElementById("grave").addEventListener('click',sendData2grave,false)
+document.getElementById("tasks").addEventListener('click',click2start,false)
+document.getElementById("tasks").addEventListener('dblclick',dblClick2complete,false)
 
 let timerId = setInterval(() => taskHealth(), 1000);
 document.getElementById("completed").addEventListener('click',clearCompleted,false)

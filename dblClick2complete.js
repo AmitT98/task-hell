@@ -1,6 +1,6 @@
 import { setupCounter } from "./counter"
 
-export function dbc2s(evt){
+export function dblClick2complete(evt){
     const taskName = evt.target.innerHTML.split(":")[0]
     const taskValue = evt.target.innerHTML.split(":")[1]
     const startTime = evt.target.getAttribute("data-startTime");

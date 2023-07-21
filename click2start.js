@@ -1,4 +1,4 @@
-export function c2s(evt) {
+export function click2start(evt) {
     const checkStart = Number(evt.target.getAttribute("data-startTime"));
     if(checkStart == 0){
     const duration  = Number(evt.target.getAttribute("data-duration"))

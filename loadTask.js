@@ -1,5 +1,5 @@
 import { setupCounter } from './counter'
-import {sendData} from './sendData'
+import {sendData2grave} from './sendData2grave'
 
 export function loadTask(updateGrave) {
     if (document.cookie != "") {
