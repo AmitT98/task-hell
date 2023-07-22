@@ -10,7 +10,7 @@ import { taskHealth } from './taskHealth'
 import { click2start } from './click2start'
 import { clearCompleted } from './clearCompleted'
 import { dblClick2complete } from './dblClick2complete'
-import { sendData2grave } from './sendData2grave'
+import { renew } from './renew'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -41,7 +41,7 @@ document.getElementById("ip3")
 
 setupCounter(document.querySelector('#Submit'),document.querySelector('#ClearTasks'),loadTask(0))
 document.querySelector('#ClearTasks').addEventListener('click', () => clearTask())
-document.getElementById("grave").addEventListener('click',sendData2grave,false)
+document.getElementById("grave").addEventListener('click',renew,false)
 document.getElementById("tasks").addEventListener('click',click2start,false)
 document.getElementById("tasks").addEventListener('dblclick',dblClick2complete,false)
 

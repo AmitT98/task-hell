@@ -1,5 +1,6 @@
 import { setupCounter } from "./counter";
 import { loadTask } from "./loadTask";
+import { send2grave } from "./send2grave";
 
 export function taskHealth(){
     if ((document.cookie != "") || (document.getElementById('tasks').childNodes[1] != undefined)){
@@ -14,8 +15,10 @@ export function taskHealth(){
             if((timeLeft == 0)){
                 const cookieName = document.getElementById('tasks').childNodes[1+i].innerHTML.split(":")[0]
                 //document.cookie = cookieName +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+                send2grave(document.getElementById('tasks').childNodes[1+i])
                 document.getElementById('tasks').childNodes[1+i].remove()
-                loadTask(1)
+                //loadTask(1)
+
             }
             else{
                 document.getElementById('tasks').childNodes[1+i].style.color = "rgb(" + redPer.toString() + " "+ greenPer.toString() + " 0)"
