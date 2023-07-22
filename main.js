@@ -38,8 +38,8 @@ document.getElementById("ip3")
         document.getElementById("how2use").innerHTML = ""
     }
 });
-
-setupCounter(document.querySelector('#Submit'),document.querySelector('#ClearTasks'),loadTask(0))
+loadTask()
+setupCounter(document.querySelector('#Submit'),document.querySelector('#ClearTasks'),0)
 document.querySelector('#ClearTasks').addEventListener('click', () => clearTask())
 document.getElementById("grave").addEventListener('click',renew,false)
 document.getElementById("tasks").addEventListener('click',click2start,false)

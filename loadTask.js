@@ -1,7 +1,8 @@
 import { setupCounter } from './counter'
 import { renew } from './renew'
+import { send2grave } from './send2grave'
 
-export function loadTask(updateGrave) {
+export function loadTask() {
     if (document.cookie != "") {
         document.getElementById("how2use").innerHTML = ""
     for(let i = 0; i<(document.cookie.split(';').length);i++){
@@ -12,25 +13,26 @@ export function loadTask(updateGrave) {
         //const hoverDeadline = new Date((duration + startTime)*1000).toString()
         const currentTaskName = taskName
 
-        if((duration == -1)&&(!updateGrave)){
+        if((duration == -1)){
             const ptag = document.createElement("p")
             ptag.innerText = currentTaskName
             ptag.setAttribute("title",taskValue)
             document.getElementById("completed").appendChild(ptag)
         }
-        else{
-        if((new Date().getTime()/1000 - startTime > duration)&&(startTime!=0)&&(updateGrave)){
-            const ptag1 = document.createElement("p")
-            ptag1.innerHTML = taskName
-            ptag1.setAttribute("title",taskValue)
-            ptag1.setAttribute("data-startTime", startTime)
-            ptag1.setAttribute("data-duration", duration)
-            document.getElementById("grave").appendChild(ptag1)
-            document.getElementById("grave").addEventListener('click',sendData,false)
-            console.log("I was here")
-            setupCounter(document.querySelector('#Submit'),0,0)
+        else if((new Date().getTime()/1000 - startTime > duration)&&(startTime!=0)){
+            //const ptag1 = document.createElement("p")
+            //ptag1.innerHTML = taskName
+            //ptag1.setAttribute("title",taskValue)
+            //ptag1.setAttribute("data-startTime", startTime)
+            //ptag1.setAttribute("data-duration", duration)
+            //document.getElementById("grave").appendChild(ptag1)
+            //document.getElementById("grave").addEventListener('click',sendData,false)
+            //console.log("I was here")
+            //setupCounter(document.querySelector('#Submit'),0,0)
+            console.log("I loaded from cookie")
+            send2grave(taskName,taskValue)
         }
-        if(!updateGrave){
+        else{
         const ptag = document.createElement("p")
         ptag.innerHTML= currentTaskName + ":" +  taskValue
         //ptag.setAttribute("title",hoverDeadline)
@@ -38,7 +40,6 @@ export function loadTask(updateGrave) {
         ptag.setAttribute("data-startTime",startTime)
         document.getElementById("tasks").appendChild(ptag)
         }
-    }
     }
     return (document.cookie.split(';').length)
 }

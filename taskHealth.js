@@ -13,10 +13,11 @@ export function taskHealth(){
             const greenPer = 255*timeLeft/(duration);
             const redPer = 255 - greenPer;
             if((timeLeft == 0)){
-                const cookieName = document.getElementById('tasks').childNodes[1+i].innerHTML.split(":")[0]
+                const taskName = document.getElementById('tasks').childNodes[1+i].innerHTML.split(":")[0]
                 //document.cookie = cookieName +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-                send2grave(document.getElementById('tasks').childNodes[1+i])
+                const taskValue = document.getElementById('tasks').childNodes[1+i].innerHTML.split(":")[1]
                 document.getElementById('tasks').childNodes[1+i].remove()
+                send2grave(taskName,taskValue)
                 //loadTask(1)
 
             }
