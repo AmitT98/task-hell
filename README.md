@@ -1,5 +1,6 @@
 # task-ledger
 Manage your tasks like never before with this productivity hack. Currently the app is deployed on netlify and can be used from there.(see [How to use?]("htu"))
+<img width="1392" alt="Screenshot 2023-07-23 at 1 29 29 PM" src="https://github.com/AmitT98/task-ledger/assets/104303111/90a30cb1-151d-4082-b25a-cbeefde5b5af">
 
 ## How to install?
 * Clone the repository using
