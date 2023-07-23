@@ -38,6 +38,9 @@ export function loadTask() {
         //ptag.setAttribute("title",hoverDeadline)
         ptag.setAttribute("data-duration",duration)
         ptag.setAttribute("data-startTime",startTime)
+        if(startTime!=0){
+            ptag.setAttribute("title", new Date((startTime+duration)*1000).toString().slice(4,24))   
+        }
         document.getElementById("tasks").appendChild(ptag)
         }
     }
