@@ -3,7 +3,7 @@ import { loadTask } from "./loadTask";
 import { send2grave } from "./send2grave";
 
 export function taskHealth(){
-    if ((document.cookie != "") || (document.getElementById('tasks').childNodes[1] != undefined)){
+    if ((document.cookie != "") && (document.getElementById('tasks').childNodes[1] != undefined)){
         for(let i = 0; i<(document.getElementById('tasks').childNodes.length);i++){
             const duration  = Number(document.getElementById('tasks').childNodes[1+i].getAttribute("data-duration"))
             const startTime  = Number(document.getElementById('tasks').childNodes[1+i].getAttribute("data-startTime"))

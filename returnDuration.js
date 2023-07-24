@@ -1,20 +1,26 @@
 export function returnDuration(){
-    const ip3 = document.getElementById("ip3").value
+    const ip3 = document.getElementById("ip3").value.toLowerCase()
     var duration = 0
-    if(ip3[ip3.length-1].toLowerCase() == 'h'){
-        duration = Number(ip3.toLowerCase().split("h")[0])*3600;
+    let ip3m = ip3
+    if(ip3m.indexOf("s") == -1){
+        if(ip3m.indexOf("m") == -1)
+            ip3m = ip3 + "0m0s" //3h=>3h0m0s
+        else
+            ip3m = ip3 + "0s" //3h30m=>3h30m0s
     }
-    else if(ip3[ip3.length-1].toLowerCase() == 'm'){
-        duration += Number(ip3.toLowerCase().split("m")[0].split("h")[0])*3600
-        duration += Number(ip3.toLowerCase().split("m")[0].split("h")[1])*60;
+    if(ip3m.indexOf("h") == -1){
+        if(ip3m.indexOf("m") == -1)
+            ip3m = "0h0m" + ip3; //30s=>0h0m30s
+        else
+            ip3m = "0h" + ip3; //30m10s=>0h30m10s
     }
-    else{
-        let ip3m = ip3.toLowerCase().split("m").length == 1?("0m"+ip3):ip3
-        ip3m = ip3m.toLowerCase().split("h").length == 1?("0h" + ip3m):ip3m;
-        duration += Number((ip3m).toLowerCase().split("h")[0])*3600
-        duration += Number((ip3m).toLowerCase().split("h")[1].split("m")[0])*60
-        duration += Number((ip3m).toLowerCase().split("s")[0].split("m")[1])
+
+    if(ip3m.indexOf("m") == -1){
+        ip3m = ip3m.split("h").join("h0m")
     }
+    console.log(ip3m)
+    const hms = ip3m.split(/[^0-9]/);
+    duration = Number(hms[0])*3600 + Number(hms[1])*60 + Number(hms[2]);
     duration = isNaN(duration)?1:duration;
     console.log(duration)
     return duration
