@@ -123,6 +123,6 @@ button:focus-visible {
   right: 0px;
   top: 0px;
   text-align: left;
-  color: magenta;
-  text-shadow: .5px 1px 2px cyan;
+  color: rgb(236, 89, 236);
+  text-shadow: .5px 1px 2px rgb(44, 180, 148);
 }
